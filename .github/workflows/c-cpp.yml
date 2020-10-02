@@ -12,6 +12,7 @@ on:
 
 jobs:
   build-windows:
+    name: harari code
     runs-on: windows-2019
     steps:
     - uses: actions/checkout@v2
@@ -19,5 +20,5 @@ jobs:
         fetch-depth: 0
         submodules: true
     - name: Compile dll
-      shell: cmd
+      shell: mingw64
       run: make -f Makefile.libretro "IPFSUPPORT=1" "IPFDIR=./src/ipflib42_win_x64"
