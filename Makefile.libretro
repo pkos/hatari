@@ -7,7 +7,7 @@ IPFDIR ?=
  
 ifeq ($(IPFSUPPORT), 1)
 CAPS_DIR = $(IPFDIR)
-CAPS_LIB = -L$(CAPS_DIR) -lcapsimg_x64
+CAPS_LIB = -L$(CAPS_DIR) -llibcapsimage
 else
 CAPS_DIR = 
 CAPS_LIB = 
