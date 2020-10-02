@@ -21,4 +21,4 @@ jobs:
         submodules: true
     - name: Compile dll
       shell: bash
-      run: make -f Makefile.libretro "IPFSUPPORT=1" "IPFDIR=D:\a\hatari\hatari\src\ipflib42_win_x64"
+      run: make -f Makefile.libretro "IPFSUPPORT=1" "IPFDIR=D:\a\hatari\hatari\src\x86_64-linux-gnu-capsimage"
