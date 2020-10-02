@@ -15,7 +15,9 @@ jobs:
     runs-on: windows-2019
     steps:
     - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+        submodules: true
     - name: Compile dll
       shell: cmd
-      run: |
-        make -f Makefile.libretro "IPFSUPPORT=1" "IPFDIR=./src/ipflib42_win_x64"
+      run: cmake -f Makefile.libretro "IPFSUPPORT=1" "IPFDIR=./src/ipflib42_win_x64"
