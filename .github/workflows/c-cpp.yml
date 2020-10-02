@@ -20,5 +20,5 @@ jobs:
         fetch-depth: 0
         submodules: true
     - name: Compile dll
-      shell: mingw64
+      shell: msys
       run: make -f Makefile.libretro "IPFSUPPORT=1" "IPFDIR=./src/ipflib42_win_x64"
