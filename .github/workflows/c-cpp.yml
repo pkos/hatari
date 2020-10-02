@@ -20,4 +20,4 @@ jobs:
         submodules: true
     - name: Compile dll
       shell: cmd
-      run: cmake -f Makefile.libretro "IPFSUPPORT=1" "IPFDIR=./src/ipflib42_win_x64"
+      run: make -f Makefile.libretro "IPFSUPPORT=1" "IPFDIR=./src/ipflib42_win_x64"
