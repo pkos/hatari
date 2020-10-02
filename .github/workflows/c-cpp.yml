@@ -13,12 +13,12 @@ on:
 jobs:
   build-windows:
     name: harari code
-    runs-on: windows-2019
+    runs-on: windows-latest
     steps:
     - uses: actions/checkout@v2
       with:
         fetch-depth: 0
         submodules: true
     - name: Compile dll
-      shell: bash
+      shell: powershell
       run: make -f Makefile.libretro "IPFSUPPORT=1" "IPFDIR=./src/ipflib42_win_x64"
