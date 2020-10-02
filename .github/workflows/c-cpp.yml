@@ -14,11 +14,8 @@ jobs:
   build:
     runs-on: windows-2019
     steps:
-
     - uses: actions/checkout@v2
-    - name: make
-      run: make -f Makefile.libretro "IPFSUPPORT=1" "IPFDIR=./src/ipflib42_win_x64"
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
+    - name: Compile dll
+      shell: cmd
+      run: |
+        make -f Makefile.libretro "IPFSUPPORT=1" "IPFDIR=./src/ipflib42_win_x64"
