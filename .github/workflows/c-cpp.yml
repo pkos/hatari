@@ -20,5 +20,5 @@ jobs:
         fetch-depth: 0
         submodules: true
     - name: Compile dll
-      shell: powershell
-      run: make -f Makefile.libretro "IPFSUPPORT=1" "IPFDIR=./src/ipflib42_win_x64"
+      shell: bash
+      run: make -f Makefile.libretro "IPFSUPPORT=1" "IPFDIR=D:\a\hatari\hatari\src\ipflib42_win_x64"
